@@ -7,10 +7,7 @@ from save import save_to_file
 os.system("clear")
 alba_url = "http://www.alba.co.kr"
 
-
-
 job_list = []
-
 
 def extract_company(link, name):
   result = requests.get(link)
@@ -86,29 +83,3 @@ main_work()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-# result = requests.get(alba_url)
-# soup = BeautifulSoup(result.text, "html.parser")
-# main = soup.find('ul', {'class': 'goodsBox'})
-# companies = main.find_all('li')
-# for company in companies:
-#   anchor = company.find('a')
-#   link = anchor.get('href')
-#   URL = f"{alba_url}{link}"
-#   print(URL)
-#   if anchor.find('span'): 
-#     name = anchor.find('span', {'class': 'company'}).get_text()
-#     print(name)
-#   else:
-#     pass
-  # passdown(link)
